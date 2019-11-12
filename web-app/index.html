@@ -8,5 +8,20 @@
 </head>
 <body>
     <h1>Hello World!</h1>
+    <button onclick="getTime()">Get Time</button> 
 </body>
+<script>
+    const apiUrl = "http://localhost:3001/";
+    
+    function get(url){
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", url, true ); // false for synchronous request
+        xmlHttp.send( null );
+        return xmlHttp.responseText;
+    }
+
+    function getTime(){
+        alert(JSON.parse(get(apiUrl + "time")).time);
+    }
+</script>
 </html>
