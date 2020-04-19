@@ -41,6 +41,6 @@ console.log(file.read("utf-8"));
 var file1 = new FileFacade(new File("file.txt"));
 console.log(file1.readTxt());
 
-// Facade
+// Proxy
 var file2 = new FileProxy(new File("file.txt"));
 console.log(file2.read("utf-8"));
