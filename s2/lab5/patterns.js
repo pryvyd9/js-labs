@@ -56,7 +56,7 @@ function inherit(proto) {
 }
  
 
-// Template method
+// Create template method
 var mySql = inherit(datastore);
  
 mySql.connect = function() {
